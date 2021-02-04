@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+</head>
+<body>
+    <h1 id="activity"></h1>
+    <p>start doing <a href="#"></a>there!</p>
+    <script>
+       function doActivity(){
+           fetch("http://www.boredapi.com/api/activity/")
+           .then(response => response.json())
+           .then(data =>{
+               document.getElementById('activity').innerText = data.activity;
+           })
+       }
+       doActivity();
+    </script>
+</body>
+</html>
